@@ -23,7 +23,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SaveManager="*res://autoloads/saving/save_manager.gd"
-GameGlobal="*res://autoloads/general/game_global.gd"
+GameGlobal="*uid://cg5b7uosnyol7"
 GameGlobalEvents="*res://autoloads/general/game_global_events.gd"
 AudioManager="*uid://bamjugiicnyji"
 Debug="*res://autoloads/debug/debug.tscn"

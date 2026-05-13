@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cg5b7uosnyol7"]
+
+[ext_resource type="Script" uid="uid://dx1leh15q0yeu" path="res://autoloads/general/game_global.gd" id="1_rpwjp"]
+[ext_resource type="Script" uid="uid://bfvsxcy743828" path="res://autoloads/general/multiplayer.gd" id="2_xvqkf"]
+
+[node name="GameGlobal" type="Node" unique_id=541147363]
+script = ExtResource("1_rpwjp")
+
+[node name="Multiplayer" type="Node" parent="." unique_id=984494366]
+script = ExtResource("2_xvqkf")
