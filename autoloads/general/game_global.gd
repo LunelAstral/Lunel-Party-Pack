@@ -2,17 +2,27 @@
 extends Node
 
 #region Declarations
+const DEFAULT_PORT : int = 8910
+const DEFAULT_DISCOVERY_PORT : int = 8911
 const MAX_CLIENTS = 8
 
 @onready var multi : LPPMultiplayer = $Multiplayer
 #endregion
 
-#region Events
-func host_server() -> void:
-	multi.start_server(8910, 8)
+#region Multiplayer Events
+func set_multiplayer_info(data: Dictionary[String, Variant]) -> void:
+	multi.multi_info = data
 
-func join_server() -> void:
-	multi.join_server("localhost", 8910)
+func host_server() -> void:
+	set_multiplayer_info({"Name": "GameServer"})
+	multi.start_server(DEFAULT_PORT, DEFAULT_DISCOVERY_PORT, MAX_CLIENTS)
+
+func join_server(ip: String) -> void:
+	set_multiplayer_info({"Name": "Player"})
+	multi.join_server(ip, DEFAULT_PORT)
+
+func find_servers():
+	multi.detect_servers_lan(DEFAULT_DISCOVERY_PORT)
 #endregion
 
 #region Helpers
