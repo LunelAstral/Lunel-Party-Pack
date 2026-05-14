@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://oeiipwmlnjsh"]
+
+[ext_resource type="Script" uid="uid://dujf263fpbfo3" path="res://scenes/town_murder/towny_lobby.gd" id="1_xjmbw"]
+
+[node name="TownyLobby" type="Node" unique_id=63269371 node_paths=PackedStringArray("send_button", "chat_text", "chat_log", "player_list")]
+script = ExtResource("1_xjmbw")
+send_button = NodePath("CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/HBoxContainer/SendMSG")
+chat_text = NodePath("CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/HBoxContainer/TextEdit")
+chat_log = NodePath("CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/PanelContainer/Chat")
+player_list = NodePath("CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/PanelContainer/ConnectedPlayers")
+scene_data = Dictionary[String, Variant]({
+"Scene Name": "Towny Lobby"
+})
+metadata/_custom_type_script = "uid://doth51knhnvk6"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1240049327]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=892500816]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=2049489450]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=709220117]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LobbyContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=743563162]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 9.0
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer" unique_id=1485114971]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConnectedPlayers" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/PanelContainer" unique_id=1947893944]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer" unique_id=1940316159]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer" unique_id=115241558]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer" unique_id=1740440226]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Chat" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=584994519]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer" unique_id=2099082578]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1009832729]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="SendMSG" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LobbyContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2032850676]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Send"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=554704474]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Disconnect" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=2120883224]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disconnect from Server"

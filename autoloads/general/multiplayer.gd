@@ -94,6 +94,12 @@ func _signal_initialization() -> void:
 
 #region RPCs
 @rpc("any_peer", "reliable")
+func send_chat(message: String) -> void:
+	var sender_id = multiplayer.get_remote_sender_id()
+	var sender_name = connected_clients.get(sender_id).get("name")
+	GameGlobalEvents.chat_recieved.emit(sender_name, message)
+
+@rpc("any_peer", "reliable")
 func _register_player(new_player_info) -> void:
 	var new_player_id = multiplayer.get_remote_sender_id()
 	connected_clients.set(new_player_id, new_player_info)
@@ -103,6 +109,8 @@ func _register_player(new_player_info) -> void:
 #region Signal Callbacks
 func _on_connected_to_server() -> void:
 	print("Successfully connected to %s" % _ip)
+	GameGlobalEvents.connected_to_server.emit()
+	listening = false
 
 func _broadcast() -> void:
 	var packet := var_to_bytes(multi_info)

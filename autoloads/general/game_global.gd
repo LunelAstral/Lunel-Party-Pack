@@ -7,6 +7,8 @@ const DEFAULT_DISCOVERY_PORT : int = 8911
 const MAX_CLIENTS = 8
 
 @onready var multi : LPPMultiplayer = $Multiplayer
+@onready var sm : SceneManager = $SceneManager
+@onready var log_sys : LogSystem = $LogSystem
 #endregion
 
 #region Multiplayer Events
@@ -14,11 +16,11 @@ func set_multiplayer_info(data: Dictionary[String, Variant]) -> void:
 	multi.multi_info = data
 
 func host_server() -> void:
-	set_multiplayer_info({"Name": "GameServer"})
+	set_multiplayer_info({"name": "GameServer"})
 	multi.start_server(DEFAULT_PORT, DEFAULT_DISCOVERY_PORT, MAX_CLIENTS)
 
 func join_server(ip: String) -> void:
-	set_multiplayer_info({"Name": "Player"})
+	set_multiplayer_info({"name": "Player"})
 	multi.join_server(ip, DEFAULT_PORT)
 
 func find_servers():

@@ -14,8 +14,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="GameJamTemplate"
-config/version="2025.6.2-template.b132d5"
+config/name="Lunel Party Pack"
+config/version="0.1.0"
 run/main_scene="uid://bf0e0l206u8xd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"

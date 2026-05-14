@@ -40,6 +40,7 @@ func _on_join_pressed():
 
 func _on_host_pressed():
 	GameGlobal.host_server()
+	GameGlobal.sm.transition_to_scene("res://scenes/town_murder/towny_lobby.tscn", {})
 
 func _on_connect_pressed(ip: String):
 	GameGlobal.join_server(ip)

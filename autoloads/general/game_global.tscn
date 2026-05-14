@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dx1leh15q0yeu" path="res://autoloads/general/game_global.gd" id="1_rpwjp"]
 [ext_resource type="Script" uid="uid://bfvsxcy743828" path="res://autoloads/general/multiplayer.gd" id="2_xvqkf"]
+[ext_resource type="Script" uid="uid://dewr3be1q4dks" path="res://autoloads/general/scene_manager.gd" id="3_i0j8s"]
+[ext_resource type="Script" uid="uid://drwy4hxja1xir" path="res://autoloads/general/log_system.gd" id="4_i0e3a"]
 
 [node name="GameGlobal" type="Node" unique_id=541147363]
 script = ExtResource("1_rpwjp")
 
 [node name="Multiplayer" type="Node" parent="." unique_id=984494366]
 script = ExtResource("2_xvqkf")
+
+[node name="SceneManager" type="Node" parent="." unique_id=211353684]
+script = ExtResource("3_i0j8s")
+
+[node name="LogSystem" type="Node" parent="." unique_id=582288682]
+script = ExtResource("4_i0e3a")

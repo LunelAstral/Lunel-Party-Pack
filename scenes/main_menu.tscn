@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cfs5cfx4xce3u"]
+
+[ext_resource type="Script" uid="uid://7jwh8dssd1fo" path="res://scenes/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://b5ywhm2jxtps" path="res://ui/main_menu/main_menu.tscn" id="2_bqqt6"]
+
+[node name="MainMenu" type="Node" unique_id=988906314]
+script = ExtResource("1_ekxnf")
+murder_town_lobby = "uid://oeiipwmlnjsh"
+scene_data = Dictionary[String, Variant]({
+"Scene Name": "Main Menu"
+})
+
+[node name="MainMenu" parent="." unique_id=235488388 instance=ExtResource("2_bqqt6")]
